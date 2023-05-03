@@ -1,0 +1,106 @@
+id: 85097b70-319a-4154-aa53-8083ddb3231e
+timestamp: 2023-05-03T21:29:40Z
+username: trisberg
+source: TAP-GUI
+accelerator:
+  name: java-rest-service
+  git:
+    url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+    subPath: java-rest-service
+    ref:
+      branch: main
+    commit: 21ee28dc0410cea91f65d60cda1a32493b2c4e9b
+fragments:
+  - name: spring-boot-h2
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/spring-boot-h2
+      ref:
+        branch: main
+      commit: 21ee28dc0410cea91f65d60cda1a32493b2c4e9b
+  - name: testcontainers-postgresql
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/testcontainers-postgresql
+      ref:
+        branch: main
+      commit: 21ee28dc0410cea91f65d60cda1a32493b2c4e9b
+  - name: build-wrapper-maven
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/build-wrapper-maven
+      ref:
+        branch: main
+      commit: 21ee28dc0410cea91f65d60cda1a32493b2c4e9b
+  - name: java-version
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/java-version
+      ref:
+        branch: main
+      commit: 21ee28dc0410cea91f65d60cda1a32493b2c4e9b
+  - name: build-wrapper-gradle
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/build-wrapper-gradle
+      ref:
+        branch: main
+      commit: 21ee28dc0410cea91f65d60cda1a32493b2c4e9b
+  - name: testcontainers-mysql
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/testcontainers-mysql
+      ref:
+        branch: main
+      commit: 21ee28dc0410cea91f65d60cda1a32493b2c4e9b
+  - name: spring-boot-database
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/spring-boot-database
+      ref:
+        branch: main
+      commit: 21ee28dc0410cea91f65d60cda1a32493b2c4e9b
+  - name: spring-boot-postgresql
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/spring-boot-postgresql
+      ref:
+        branch: main
+      commit: 21ee28dc0410cea91f65d60cda1a32493b2c4e9b
+  - name: spring-boot-mysql
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/spring-boot-mysql
+      ref:
+        branch: main
+      commit: 21ee28dc0410cea91f65d60cda1a32493b2c4e9b
+  - name: live-update
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/live-update
+      ref:
+        branch: main
+      commit: 21ee28dc0410cea91f65d60cda1a32493b2c4e9b
+  - name: tap-workload
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/tap-workload
+      ref:
+        branch: main
+      commit: 21ee28dc0410cea91f65d60cda1a32493b2c4e9b
+options:
+  artifactId: customer-profile
+  buildTool: maven
+  databaseIntegrationTestType: in-memory
+  databaseMigrationTool: flyway
+  databaseName: customer-database
+  databaseType: postgres
+  exposeOpenAPIEndpoint: false
+  groupId: com.example
+  includeBuildToolWrapper: true
+  javaVersion: 17
+  liveUpdateIDESupport: true
+  packageName: com.example.customerprofile
+  projectName: java-rest-service
+  sourceRepositoryPrefix: dev.local
+  updateBoot3: true
